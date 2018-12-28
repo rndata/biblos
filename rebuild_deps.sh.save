@@ -1,0 +1,10 @@
+q#!/bin/sh
+
+pip install pip-tools
+
+for i in *.in; do
+    req_name=${i%".in"}
+    echo "\ncompiling" $i
+    pip-compile $i
+    sed -i "s|-e file://`pwd`||" $req_name.txt
+done

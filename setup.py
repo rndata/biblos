@@ -12,7 +12,8 @@ setup(
     install_requires=[
         "toolz ~= 0.9",
         "click ~= 7.0",
-        "nltk ~= 3.4"
+        "nltk ~= 3.4",
+        "xmltodict ~= 0.11.0"
     ],
     extras_require=extra_deps,
     entry_points={
